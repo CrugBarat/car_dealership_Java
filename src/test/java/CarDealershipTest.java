@@ -111,8 +111,8 @@ public class CarDealershipTest {
 
     @Test
     public void canRepairAVehicle() {
-        car.damageCost(4999.50);
-        carDealership.repairVehicle(car, 2999.50);
+        car.damage(4999.50);
+        carDealership.repair(car, 2999.50);
         assertEquals(22999.50, car.getPrice(), 0.01);
     }
 }

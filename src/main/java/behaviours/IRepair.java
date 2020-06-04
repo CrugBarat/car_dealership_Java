@@ -4,5 +4,5 @@ import vehicles.Vehicle;
 
 public interface IRepair {
 
-    void repairVehicle(Vehicle vehicle, double cost);
+    void repair(Vehicle vehicle, double cost);
 }

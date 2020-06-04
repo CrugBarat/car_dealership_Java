@@ -54,11 +54,6 @@ public class CarDealership implements IBuy, ISell, IRepair {
         this.till -= amount;
     }
 
-    public void repairVehicle(Vehicle vehicle, double cost) {
-        this.till -= cost;
-        vehicle.setPrice(vehicle.getPrice() + cost);
-    }
-
     public void buyCar(Vehicle vehicle) {
         addCar(vehicle);
         removeCash(vehicle.getPrice());
@@ -77,5 +72,10 @@ public class CarDealership implements IBuy, ISell, IRepair {
     public void sellCarToCustomer(Vehicle vehicle, Customer customer) {
         sellCar(vehicle);
         customer.buyCar(vehicle);
+    }
+
+    public void repair(Vehicle vehicle, double cost) {
+        this.till -= cost;
+        vehicle.setPrice(vehicle.getPrice() + cost);
     }
 }
