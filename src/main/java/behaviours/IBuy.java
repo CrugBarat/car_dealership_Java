@@ -4,5 +4,5 @@ import vehicles.Vehicle;
 
 public interface IBuy {
 
-    void buy(Vehicle vehicle);
+    void buyCar(Vehicle vehicle);
 }
