@@ -55,10 +55,12 @@ public class Customer implements IBuy, ISell {
     }
 
     public void buyCar(Vehicle vehicle) {
-
+        addCar(vehicle);
+        removeCash(vehicle.getPrice());
     }
 
     public void sellCar(Vehicle vehicle) {
-
+        removeCar(vehicle);
+        addCash(vehicle.getPrice());
     }
 }

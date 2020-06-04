@@ -74,4 +74,19 @@ public class CustomerTest {
         customer.removeCash(10000);
         assertEquals(30000, customer.getCash(), 0.01);
     }
+
+    @Test
+    public void canBuyCar() {
+        customer.buyCar(car);
+        assertEquals(15000.50, customer.getCash(), 0.01);
+        assertEquals(1, customer.getCarCollectionSize());
+    }
+
+    @Test
+    public void canSellCar() {
+        customer.addCar(car);
+        customer.sellCar(car);
+        assertEquals(64999.50, customer.getCash(), 0.01);
+        assertEquals(0, customer.getCarCollectionSize());
+    }
 }
