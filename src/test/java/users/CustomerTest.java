@@ -62,4 +62,16 @@ public class CustomerTest {
         customer.removeCar(car);
         assertEquals(0, customer.getCarCollectionSize());
     }
+
+    @Test
+    public void canAddCash() {
+        customer.addCash(8000);
+        assertEquals(48000, customer.getCash(), 0.01);
+    }
+
+    @Test
+    public void canRemoveCash() {
+        customer.removeCash(10000);
+        assertEquals(30000, customer.getCash(), 0.01);
+    }
 }

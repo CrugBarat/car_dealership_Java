@@ -46,6 +46,14 @@ public class Customer implements IBuy, ISell {
         this.carCollection.remove(vehicle);
     }
 
+    public void addCash(double amount) {
+        this.cash += amount;
+    }
+
+    public void removeCash(double amount) {
+        this.cash -= amount;
+    }
+
     public void buyCar(Vehicle vehicle) {
 
     }
