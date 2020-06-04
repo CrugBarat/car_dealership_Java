@@ -10,7 +10,7 @@ public class EngineTest {
 
     @Before
     public void before(){
-        engine = new Engine("BMW","S14B25", "95.0x87.0", 1, 36);
+        engine = new Engine("BMW","S14B25", "95.0x87.0", 1, 36, 2.5, 238, 240);
     }
 
     @Test
@@ -36,6 +36,21 @@ public class EngineTest {
     @Test
     public void hasWarranty(){
         assertEquals(36, engine.getWarranty());
+    }
+
+    @Test
+    public void hasLitres(){
+        assertEquals(2.5, engine.getLitres(), 0.01);
+    }
+
+    @Test
+    public void hasPower(){
+        assertEquals(238, engine.getPower());
+    }
+
+    @Test
+    public void hasTorque(){
+        assertEquals(240, engine.getTorque());
     }
 
     @Test
@@ -66,5 +81,23 @@ public class EngineTest {
     public void canSetWarranty(){
         engine.setWarranty(24);
         assertEquals(24, engine.getWarranty());
+    }
+
+    @Test
+    public void canSetLitres(){
+        engine.setLitres(2.2);
+        assertEquals(2.2, engine.getLitres(), 0.01);
+    }
+
+    @Test
+    public void canSetPower(){
+        engine.setPower(222);
+        assertEquals(222, engine.getPower());
+    }
+
+    @Test
+    public void canSetTorque(){
+        engine.setTorque(200);
+        assertEquals(200, engine.getTorque());
     }
 }
