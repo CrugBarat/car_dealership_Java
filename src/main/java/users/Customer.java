@@ -1,10 +1,12 @@
 package users;
 
+import behaviours.IBuy;
+import behaviours.ISell;
 import vehicles.Vehicle;
 
 import java.util.ArrayList;
 
-public class Customer {
+public class Customer implements IBuy, ISell {
 
     private String name;
     private double cash;
@@ -44,4 +46,11 @@ public class Customer {
         this.carCollection.remove(vehicle);
     }
 
+    public void buyCar(Vehicle vehicle) {
+
+    }
+
+    public void sellCar(Vehicle vehicle) {
+
+    }
 }
