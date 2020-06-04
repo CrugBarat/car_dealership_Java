@@ -1,6 +1,6 @@
+package vehicle_components;
 import org.junit.Before;
 import org.junit.Test;
-import vehicle_components.Alloy;
 
 import static org.junit.Assert.assertEquals;
 
