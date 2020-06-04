@@ -10,7 +10,7 @@ public class AlloyTest {
 
     @Before
     public void before(){
-        alloy = new Alloy("ENKEI","RS05RR", 4, 12);
+        alloy = new Alloy("ENKEI","RS05RR", "18x8.5", 4, 12);
     }
 
     @Test
@@ -21,6 +21,11 @@ public class AlloyTest {
     @Test
     public void hasModel(){
         assertEquals("RS05RR", alloy.getModel());
+    }
+
+    @Test
+    public void hasDimensions(){
+        assertEquals("18x8.5", alloy.getDimensions());
     }
 
     @Test
@@ -43,6 +48,12 @@ public class AlloyTest {
     public void canSetModel(){
         alloy.setModel("AE");
         assertEquals("AE", alloy.getModel());
+    }
+
+    @Test
+    public void canSetDimensions(){
+        alloy.setModel("7.5x20");
+        assertEquals("7.5x20", alloy.getModel());
     }
 
     @Test

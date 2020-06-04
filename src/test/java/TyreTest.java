@@ -10,7 +10,7 @@ public class TyreTest {
 
     @Before
     public void before(){
-        tyre = new Tyre("Continental","PremiumContact", 4, 6);
+        tyre = new Tyre("Continental","PremiumContact", "17", 4, 6);
     }
 
     @Test
@@ -21,6 +21,11 @@ public class TyreTest {
     @Test
     public void hasModel(){
         assertEquals("PremiumContact", tyre.getModel());
+    }
+
+    @Test
+    public void hasDimensions(){
+        assertEquals("17", tyre.getDimensions());
     }
 
     @Test
@@ -43,6 +48,12 @@ public class TyreTest {
     public void canSetModel(){
         tyre.setModel("SPORT MAXX RACE 2");
         assertEquals("SPORT MAXX RACE 2", tyre.getModel());
+    }
+
+    @Test
+    public void canSetDimensions(){
+        tyre.setModel("18");
+        assertEquals("18", tyre.getModel());
     }
 
     @Test
