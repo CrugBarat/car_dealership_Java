@@ -36,4 +36,12 @@ public class Customer {
         this.cash = cash;
     }
 
+    public void addCar(Vehicle vehicle) {
+        this.carCollection.add(vehicle);
+    }
+
+    public void removeCar(Vehicle vehicle) {
+        this.carCollection.remove(vehicle);
+    }
+
 }
