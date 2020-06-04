@@ -13,4 +13,36 @@ public class Component {
         this.quantity = quantity;
         this.warranty = warranty;
     }
+
+    public String getBrand() {
+        return this.brand;
+    }
+
+    public String getModel() {
+        return this.model;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
+    }
+
+    public int getWarranty() {
+        return this.warranty;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setWarranty(int warranty) {
+        this.warranty = warranty;
+    }
 }
