@@ -10,7 +10,7 @@ public class TyreTest {
 
     @Before
     public void before(){
-        tyre = new Tyre("Continental","PremiumContact", "17", 4, 6);
+        tyre = new Tyre("Continental","PremiumContact", "17", 4, 6, "winter");
     }
 
     @Test
@@ -36,6 +36,11 @@ public class TyreTest {
     @Test
     public void hasWarranty(){
         assertEquals(6, tyre.getWarranty());
+    }
+
+    @Test
+    public void hasWeather(){
+        assertEquals("winter", tyre.getWeather());
     }
 
     @Test
@@ -66,5 +71,11 @@ public class TyreTest {
     public void canSetWarranty(){
         tyre.setWarranty(12);
         assertEquals(12, tyre.getWarranty());
+    }
+
+    @Test
+    public void canSetWeather(){
+        tyre.setWeather("summer");
+        assertEquals("summer", tyre.getWeather());
     }
 }
