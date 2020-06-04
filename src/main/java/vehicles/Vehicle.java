@@ -20,4 +20,43 @@ public abstract class Vehicle {
         this.tyres = tyres;
     }
 
+    public double getPrice() {
+        return this.price;
+    }
+
+    public String getColour() {
+        return this.colour;
+    }
+
+    public Engine getEngine() {
+        return this.engine;
+    }
+
+    public Alloy getAlloys() {
+        return this.alloys;
+    }
+
+    public Tyre getTyres() {
+        return this.tyres;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void setAlloys(Alloy alloys) {
+        this.alloys = alloys;
+    }
+
+    public void setTyres(Tyre tyres) {
+        this.tyres = tyres;
+    }
 }
