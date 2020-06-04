@@ -10,7 +10,7 @@ public class EngineTest {
 
     @Before
     public void before(){
-        engine = new Engine("BMW","S14B25", "95.0x87.0", 1, 36, 2.5, 238, 240);
+        engine = new Engine("BMW","S14B25", 36, 2.5, 238, 240);
     }
 
     @Test
@@ -21,16 +21,6 @@ public class EngineTest {
     @Test
     public void hasModel(){
         assertEquals("S14B25", engine.getModel());
-    }
-
-    @Test
-    public void hasDimensions(){
-        assertEquals("95.0x87.0", engine.getDimensions());
-    }
-
-    @Test
-    public void hasQuantity(){
-        assertEquals(1, engine.getQuantity());
     }
 
     @Test
@@ -63,18 +53,6 @@ public class EngineTest {
     public void canSetModel(){
         engine.setModel("C1");
         assertEquals("C1", engine.getModel());
-    }
-
-    @Test
-    public void canSetDimensions(){
-        engine.setDimensions("105.0x95.0");
-        assertEquals("105.0x95.0", engine.getDimensions());
-    }
-
-    @Test
-    public void canSetQuantity(){
-        engine.setQuantity(0);
-        assertEquals(0, engine.getQuantity());
     }
 
     @Test

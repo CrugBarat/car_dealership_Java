@@ -6,8 +6,8 @@ public class Engine extends Component {
     private int power;
     private int torque;
 
-    public Engine(String brand, String model, String dimensions, int quantity, int warranty, double litres, int power, int torque) {
-        super(brand, model, dimensions, quantity, warranty);
+    public Engine(String brand, String model, int warranty, double litres, int power, int torque) {
+        super(brand, model, warranty);
         this.litres = litres;
         this.power = power;
         this.torque = torque;

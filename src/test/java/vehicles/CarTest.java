@@ -17,8 +17,8 @@ public class CarTest {
 
     @Before
     public void before(){
-        engine = new Engine("BMW","S14B25", "95.0x87.0", 1, 36, 2.5, 238, 240);
-        engine2 = new Engine("BMW","M40B18", "85.0x77.0", 1, 36, 2.0, 208, 190);
+        engine = new Engine("BMW","S14B25", 36, 2.5, 238, 240);
+        engine2 = new Engine("BMW","M40B18", 36, 2.0, 208, 190);
         alloy = new Alloy("ENKEI","RS05RR", "18x8.5", 4, 12, "black");
         alloy2 = new Alloy("BORBET","AE", "7.5x20", 4, 12, "silver");
         tyre = new Tyre("Continental","PremiumContact", "17", 4, 6, "winter");
