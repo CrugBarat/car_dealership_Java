@@ -1,9 +1,10 @@
+import behaviours.IRepair;
 import users.Customer;
 import vehicles.Vehicle;
 
 import java.util.ArrayList;
 
-public class CarDealership {
+public class CarDealership implements IRepair {
 
     private String name;
     private double till;
@@ -62,4 +63,10 @@ public class CarDealership {
         addCash(vehicle.getPrice());
         customer.buyCar(vehicle);
     }
+
+    public void repairVehicle(Vehicle vehicle, double cost) {
+        this.till -= cost;
+        vehicle.setPrice(vehicle.getPrice() + cost);
+    }
+
 }

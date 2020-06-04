@@ -70,7 +70,7 @@ public abstract class Vehicle implements IDamage {
         this.tyres = tyres;
     }
 
-    public void damageCost(int cost) {
+    public void damageCost(double cost) {
         this.price -= cost;
     }
 }

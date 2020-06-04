@@ -2,5 +2,5 @@ package behaviours;
 
 public interface IDamage {
 
-    void damageCost(int cost);
+    void damageCost(double cost);
 }

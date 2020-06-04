@@ -93,4 +93,11 @@ public class CarDealershipTest {
         assertEquals(0, carDealership.getCarCollectionSize());
         assertEquals(1, customer.getCarCollectionSize());
     }
+
+    @Test
+    public void canRepairAVehicle() {
+        car.damageCost(4999.50);
+        carDealership.repairVehicle(car, 2999.50);
+        assertEquals(22999.50, car.getPrice(), 0.01);
+    }
 }
