@@ -102,4 +102,10 @@ public class ElectricCarTest {
         car.setTyres(tyre2);
         assertEquals(tyre2, car.getTyres());
     }
+
+    @Test
+    public void carCanBeDamged() {
+        car.damageCost(2000);
+        assertEquals(22999.50, car.getPrice(), 0.01);
+    }
 }

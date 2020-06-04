@@ -1,9 +1,10 @@
 package vehicles;
 
+import behaviours.IDamage;
 import vehicle_components.Alloy;
 import vehicle_components.Tyre;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements IDamage {
 
     private String make;
     private String model;
@@ -67,5 +68,9 @@ public abstract class Vehicle {
 
     public void setTyres(Tyre tyres) {
         this.tyres = tyres;
+    }
+
+    public void damageCost(int cost) {
+        this.price -= cost;
     }
 }
