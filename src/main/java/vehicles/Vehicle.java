@@ -4,7 +4,7 @@ import vehicle_components.Alloy;
 import vehicle_components.Engine;
 import vehicle_components.Tyre;
 
-public class Vehicle {
+public abstract class Vehicle {
 
     private double price;
     private String colour;

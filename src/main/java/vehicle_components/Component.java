@@ -1,6 +1,6 @@
 package vehicle_components;
 
-public class Component {
+public abstract class Component {
 
     private String brand;
     private String model;
