@@ -10,7 +10,7 @@ public class AlloyTest {
 
     @Before
     public void before(){
-        alloy = new Alloy("ENKEI","RS05RR", "18x8.5", 4, 12);
+        alloy = new Alloy("ENKEI","RS05RR", "18x8.5", 4, 12, "black");
     }
 
     @Test
@@ -36,6 +36,11 @@ public class AlloyTest {
     @Test
     public void hasWarranty(){
         assertEquals(12, alloy.getWarranty());
+    }
+
+    @Test
+    public void hasColour(){
+        assertEquals("black", alloy.getColour());
     }
 
     @Test
@@ -66,6 +71,12 @@ public class AlloyTest {
     public void canSetWarranty(){
         alloy.setWarranty(24);
         assertEquals(24, alloy.getWarranty());
+    }
+
+    @Test
+    public void canSetColour(){
+        alloy.setColour("Silver");
+        assertEquals("Silver", alloy.getColour());
     }
 
 }
