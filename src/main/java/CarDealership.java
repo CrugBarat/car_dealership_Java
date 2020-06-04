@@ -1,12 +1,11 @@
 import behaviours.IBuy;
-import behaviours.IRepair;
 import behaviours.ISell;
 import users.Customer;
 import vehicles.Vehicle;
 
 import java.util.ArrayList;
 
-public class CarDealership implements IBuy, ISell, IRepair {
+public class CarDealership implements IBuy, ISell {
 
     private String name;
     private double till;
