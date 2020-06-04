@@ -20,7 +20,7 @@ public class CustomerTest {
        Engine engine = new Engine("BMW", "S14B25", 36, 2.5, 238, 240);
        Alloy alloy = new Alloy("ENKEI", "RS05RR", "18x8.5", 4, 12, "black");
        Tyre tyre = new Tyre("Continental", "PremiumContact", "17", 4, 6, "winter");
-       car = new Car(24999.50, "black", engine, alloy, tyre);
+       car = new Car("BMW", "e30",24999.50, "black", alloy, tyre, engine);
     }
 
     @Test

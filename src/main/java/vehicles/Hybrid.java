@@ -10,8 +10,8 @@ public class Hybrid extends Vehicle{
     private Engine engine;
     private Battery battery;
 
-    public Hybrid(double price, String colour, Alloy alloys, Tyre tyres, Engine engine, Battery battery) {
-        super(price, colour, alloys, tyres);
+    public Hybrid(String make, String model, double price, String colour, Alloy alloys, Tyre tyres, Engine engine, Battery battery) {
+        super(make, model, price, colour, alloys, tyres);
         this.engine = engine;
         this.battery = battery;
     }

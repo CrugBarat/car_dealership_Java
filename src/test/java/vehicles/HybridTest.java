@@ -27,7 +27,17 @@ public class HybridTest {
         alloy2 = new Alloy("BORBET","AE", "7.5x20", 4, 12, "silver");
         tyre = new Tyre("Continental","PremiumContact", "17", 4, 6, "winter");
         tyre2 = new Tyre("Dunlop","SPORT MAXX RACE 2", "18", 4, 12, "summer");
-        car = new Hybrid(24999.50,"black", alloy, tyre, engine, battery);
+        car = new Hybrid("Toyota", "Hybrid", 24999.50,"black", alloy, tyre, engine, battery);
+    }
+
+    @Test
+    public void hasMake(){
+        assertEquals("Toyota", car.getMake());
+    }
+
+    @Test
+    public void hasModel(){
+        assertEquals("Hybrid", car.getModel());
     }
 
     @Test
@@ -58,6 +68,18 @@ public class HybridTest {
     @Test
     public void hasBattery(){
         assertEquals(battery, car.getBattery());
+    }
+
+    @Test
+    public void canSetMake(){
+        car.setMake("Fiat");
+        assertEquals("Fiat", car.getMake());
+    }
+
+    @Test
+    public void canSetModel(){
+        car.setModel("500");
+        assertEquals("500", car.getModel());
     }
 
     @Test

@@ -8,8 +8,8 @@ public class Car extends Vehicle {
 
     private Engine engine;
 
-    public Car(double price, String colour, Engine engine, Alloy alloys, Tyre tyres) {
-        super(price, colour, alloys, tyres);
+    public Car(String make, String model, double price, String colour, Alloy alloys, Tyre tyres, Engine engine) {
+        super(make, model, price, colour, alloys, tyres);
         this.engine = engine;
     }
 

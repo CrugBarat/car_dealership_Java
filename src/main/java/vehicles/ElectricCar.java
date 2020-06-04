@@ -8,8 +8,8 @@ public class ElectricCar extends Vehicle {
 
     private Battery battery;
 
-    public ElectricCar(double price, String colour, Alloy alloys, Tyre tyres, Battery battery) {
-        super(price, colour, alloys, tyres);
+    public ElectricCar(String make, String model, double price, String colour, Alloy alloys, Tyre tyres, Battery battery) {
+        super(make, model, price, colour, alloys, tyres);
         this.battery = battery;
     }
 

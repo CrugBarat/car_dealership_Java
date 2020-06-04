@@ -23,7 +23,17 @@ public class CarTest {
         alloy2 = new Alloy("BORBET","AE", "7.5x20", 4, 12, "silver");
         tyre = new Tyre("Continental","PremiumContact", "17", 4, 6, "winter");
         tyre2 = new Tyre("Dunlop","SPORT MAXX RACE 2", "18", 4, 12, "summer");
-        car = new Car(24999.50,"black", engine, alloy, tyre);
+        car = new Car("BMW", "E30", 24999.50,"black", alloy, tyre, engine);
+    }
+
+    @Test
+    public void hasMake(){
+        assertEquals("BMW", car.getMake());
+    }
+
+    @Test
+    public void hasModel(){
+        assertEquals("E30", car.getModel());
     }
 
     @Test
@@ -49,6 +59,18 @@ public class CarTest {
     @Test
     public void hasTyres(){
         assertEquals(tyre, car.getTyres());
+    }
+
+    @Test
+    public void canSetMake(){
+        car.setMake("Fiat");
+        assertEquals("Fiat", car.getMake());
+    }
+
+    @Test
+    public void canSetModel(){
+        car.setModel("500");
+        assertEquals("500", car.getModel());
     }
 
     @Test

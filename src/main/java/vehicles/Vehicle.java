@@ -1,21 +1,32 @@
 package vehicles;
 
 import vehicle_components.Alloy;
-import vehicle_components.Engine;
 import vehicle_components.Tyre;
 
 public abstract class Vehicle {
 
+    private String make;
+    private String model;
     private double price;
     private String colour;
     private Alloy alloys;
     private Tyre tyres;
 
-    public Vehicle(double price, String colour, Alloy alloys, Tyre tyres) {
+    public Vehicle(String make, String model, double price, String colour, Alloy alloys, Tyre tyres) {
+        this.make = make;
+        this.model = model;
         this.price = price;
         this.colour = colour;
         this.alloys = alloys;
         this.tyres = tyres;
+    }
+
+    public String getMake() {
+        return this.make;
+    }
+
+    public String getModel() {
+        return this. model;
     }
 
     public double getPrice() {
@@ -26,13 +37,20 @@ public abstract class Vehicle {
         return this.colour;
     }
 
-
     public Alloy getAlloys() {
         return this.alloys;
     }
 
     public Tyre getTyres() {
         return this.tyres;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public void setPrice(double price) {
