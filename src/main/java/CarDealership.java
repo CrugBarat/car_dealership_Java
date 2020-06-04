@@ -1,3 +1,4 @@
+import users.Customer;
 import vehicles.Vehicle;
 
 import java.util.ArrayList;
@@ -50,13 +51,15 @@ public class CarDealership {
         this.till -= amount;
     }
 
-    public void buyCar(Vehicle vehicle) {
+    public void buyCar(Vehicle vehicle, Customer customer) {
         addCar(vehicle);
         removeCash(vehicle.getPrice());
+        customer.sellCar(vehicle);
     }
 
-    public void sellCar(Vehicle vehicle) {
+    public void sellCar(Vehicle vehicle, Customer customer) {
         removeCar(vehicle);
         addCash(vehicle.getPrice());
+        customer.buyCar(vehicle);
     }
 }

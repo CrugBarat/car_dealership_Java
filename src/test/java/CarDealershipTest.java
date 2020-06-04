@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import users.Customer;
 import vehicle_components.Alloy;
 import vehicle_components.Engine;
 import vehicle_components.Tyre;
@@ -11,6 +12,7 @@ public class CarDealershipTest {
 
     CarDealership carDealership;
     Car car;
+    Customer customer;
 
     @Before
     public void before() {
@@ -19,6 +21,7 @@ public class CarDealershipTest {
         Alloy alloy = new Alloy("ENKEI", "RS05RR", "18x8.5", 4, 12, "black");
         Tyre tyre = new Tyre("Continental", "PremiumContact", "17", 4, 6, "winter");
         car = new Car("BMW", "e30",24999.50, "black", alloy, tyre, engine);
+        customer = new Customer("Jane Doe", 40000.0);
     }
 
     @Test
@@ -75,16 +78,19 @@ public class CarDealershipTest {
 
     @Test
     public void canBuyCar() {
-        carDealership.buyCar(car);
+        customer.addCar(car);
+        carDealership.buyCar(car, customer);
         assertEquals(75000.50, carDealership.getTill(), 0.01);
         assertEquals(1, carDealership.getCarCollectionSize());
+        assertEquals(0, customer.getCarCollectionSize());
     }
 
     @Test
     public void canSellCar() {
         carDealership.addCar(car);
-        carDealership.sellCar(car);
+        carDealership.sellCar(car, customer);
         assertEquals(124999.50, carDealership.getTill(), 0.01);
         assertEquals(0, carDealership.getCarCollectionSize());
+        assertEquals(1, customer.getCarCollectionSize());
     }
 }
