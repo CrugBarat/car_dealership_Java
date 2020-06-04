@@ -67,8 +67,8 @@ public class EngineTest {
 
     @Test
     public void canSetDimensions(){
-        engine.setModel("105.0x95.0");
-        assertEquals("105.0x95.0", engine.getModel());
+        engine.setDimensions("105.0x95.0");
+        assertEquals("105.0x95.0", engine.getDimensions());
     }
 
     @Test

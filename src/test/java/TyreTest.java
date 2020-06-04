@@ -57,8 +57,8 @@ public class TyreTest {
 
     @Test
     public void canSetDimensions(){
-        tyre.setModel("18");
-        assertEquals("18", tyre.getModel());
+        tyre.setDimensions("18");
+        assertEquals("18", tyre.getDimensions());
     }
 
     @Test

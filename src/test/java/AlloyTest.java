@@ -57,8 +57,8 @@ public class AlloyTest {
 
     @Test
     public void canSetDimensions(){
-        alloy.setModel("7.5x20");
-        assertEquals("7.5x20", alloy.getModel());
+        alloy.setDimensions("7.5x20");
+        assertEquals("7.5x20", alloy.getDimensions());
     }
 
     @Test
