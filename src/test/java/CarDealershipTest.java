@@ -78,17 +78,32 @@ public class CarDealershipTest {
 
     @Test
     public void canBuyCar() {
+        carDealership.buyCar(car);
+        assertEquals(75000.5, carDealership.getTill(), 0.01);
+        assertEquals(1, carDealership.getCarCollectionSize());
+    }
+
+    @Test
+    public void canSellCar() {
+        carDealership.addCar(car);
+        carDealership.sellCar(car);
+        assertEquals(124999.5, carDealership.getTill(), 0.01);
+        assertEquals(0, customer.getCarCollectionSize());
+    }
+
+    @Test
+    public void canBuyCarFromCustomer() {
         customer.addCar(car);
-        carDealership.buyCar(car, customer);
+        carDealership.buyCarFromCustomer(car, customer);
         assertEquals(75000.50, carDealership.getTill(), 0.01);
         assertEquals(1, carDealership.getCarCollectionSize());
         assertEquals(0, customer.getCarCollectionSize());
     }
 
     @Test
-    public void canSellCar() {
+    public void canSellCarToCustomer() {
         carDealership.addCar(car);
-        carDealership.sellCar(car, customer);
+        carDealership.sellCarToCustomer(car, customer);
         assertEquals(124999.50, carDealership.getTill(), 0.01);
         assertEquals(0, carDealership.getCarCollectionSize());
         assertEquals(1, customer.getCarCollectionSize());

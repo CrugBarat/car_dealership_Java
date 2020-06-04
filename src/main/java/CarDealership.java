@@ -1,10 +1,12 @@
+import behaviours.IBuy;
 import behaviours.IRepair;
+import behaviours.ISell;
 import users.Customer;
 import vehicles.Vehicle;
 
 import java.util.ArrayList;
 
-public class CarDealership implements IRepair {
+public class CarDealership implements IBuy, ISell, IRepair {
 
     private String name;
     private double till;
@@ -52,21 +54,28 @@ public class CarDealership implements IRepair {
         this.till -= amount;
     }
 
-    public void buyCar(Vehicle vehicle, Customer customer) {
-        addCar(vehicle);
-        removeCash(vehicle.getPrice());
-        customer.sellCar(vehicle);
-    }
-
-    public void sellCar(Vehicle vehicle, Customer customer) {
-        removeCar(vehicle);
-        addCash(vehicle.getPrice());
-        customer.buyCar(vehicle);
-    }
-
     public void repairVehicle(Vehicle vehicle, double cost) {
         this.till -= cost;
         vehicle.setPrice(vehicle.getPrice() + cost);
     }
 
+    public void buyCar(Vehicle vehicle) {
+        addCar(vehicle);
+        removeCash(vehicle.getPrice());
+    }
+
+    public void sellCar(Vehicle vehicle) {
+        removeCar(vehicle);
+        addCash(vehicle.getPrice());
+    }
+
+    public void buyCarFromCustomer(Vehicle vehicle, Customer customer) {
+        buyCar(vehicle);
+        customer.sellCar(vehicle);
+    }
+
+    public void sellCarToCustomer(Vehicle vehicle, Customer customer) {
+        sellCar(vehicle);
+        customer.buyCar(vehicle);
+    }
 }
